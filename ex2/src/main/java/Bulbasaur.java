@@ -29,65 +29,47 @@
         }
     }
 
-     // getLevel method
-     public int getLevel() {
-        // TODO: Implement this method
-        return this.level; // Placeholder return value
+    // getLevel method
+    public int getLevel() {
+        return this.level;
     }
 
     // getName method
     public String getName() {
-        // TODO: Implement this method
         if (this.id == 1) {
             return "Bulbasaur";
-        }
-        else if (this.id == 2) {
+        } else if (this.id == 2) {
             return "Ivysaur";
-        }
-        else{
+        } else {
             return "Venusaur";
         }
-        // Return the name based on the current id
-        // Placeholder return value
     }
 
     // getID method
     public int getID() {
-        // TODO: Implement this method
-
-        return this.id; // Placeholder return value
+        return this.id;
     }
 
     // toString method
     @Override
     public String toString() {
-        // TODO: Implement this method
-
-        // Return a string representation of the Bulbasaur object
-        return "Level: " + level + ", ID: " + id; // Placeholder return value
+        return "Level: " + level + ", ID: " + id;
     }
 
     // equals method
     @Override
     public boolean equals(Object obj) {
-        // TODO: Implement this method
-        if (obj instanceof Bulbasaur) {
-            Bulbasaur other = (Bulbasaur) obj;
-            return this.id == other.id && this.level == other.level;
-        }
-        // Compare this Bulbasaur object with another object
-        return false; // Placeholder return value
+        if (this == obj) return true;
+        if (!(obj instanceof Bulbasaur)) return false;
+        Bulbasaur other = (Bulbasaur) obj;
+        return this.id == other.id && this.level == other.level;
     }
 
     // copy method
     public Bulbasaur copy() {
-        // TODO: Implement this method
         Bulbasaur copy = new Bulbasaur();
         copy.id = this.id;
         copy.level = this.level;
-        // Create and return a new Bulbasaur object with the same id and level
-        return copy; // Placeholder return value
+        return copy;
     }
-
-
-} // Make sure this closing brace is present
+}
