@@ -7,33 +7,30 @@
  * Description: This program defines a Bulbasaur class with methods to set and get its level, ID, name, and to copy itself.
  */
 
-public class Bulbasaur {
+ public class Bulbasaur {
     private int id;
     private int level;
 
     // Constructor
     public Bulbasaur() {
-        // TODO: Initialize id and level with appropriate values
         this.id = 1;
         this.level = 1;
     }
 
     // setLevel method
     public void setLevel(int lv) {
-        // TODO: Implement this method
-        // Update the level
         this.level = lv;
         if (lv >= 32) {
             this.id = 3;
-        } // If the new level is 16 or higher but less than 32, evolve to Ivysaur
-        else if (lv >=16){
+        } else if (lv >= 16) {
             this.id = 2;
-        }else {
-            this.id = 1;// If the new level is 32 or higher, evolve to Venusaur
+        } else {
+            this.id = 1;
+        }
     }
 
-    // getLevel method
-    public int getLevel() {
+     // getLevel method
+     public int getLevel() {
         // TODO: Implement this method
         return this.level; // Placeholder return value
     }
@@ -67,7 +64,7 @@ public class Bulbasaur {
         // TODO: Implement this method
 
         // Return a string representation of the Bulbasaur object
-        return "Level: " + level + ", ID: " + id;; // Placeholder return value
+        return "Level: " + level + ", ID: " + id; // Placeholder return value
     }
 
     // equals method
@@ -91,4 +88,6 @@ public class Bulbasaur {
         // Create and return a new Bulbasaur object with the same id and level
         return copy; // Placeholder return value
     }
-}
+
+
+} // Make sure this closing brace is present
