@@ -23,12 +23,13 @@ public class Bulbasaur {
         // TODO: Implement this method
         // Update the level
         this.level = lv;
-        if (lv >= 16 && lv < 32) {
-            this.id = 2;
-        } // If the new level is 16 or higher but less than 32, evolve to Ivysaur
-        else if (lv >=32){
+        if (lv >= 32) {
             this.id = 3;
-        }// If the new level is 32 or higher, evolve to Venusaur
+        } // If the new level is 16 or higher but less than 32, evolve to Ivysaur
+        else if (lv >=16){
+            this.id = 2;
+        }else {
+            this.id = 1;// If the new level is 32 or higher, evolve to Venusaur
     }
 
     // getLevel method
@@ -46,11 +47,11 @@ public class Bulbasaur {
         else if (this.id == 2) {
             return "Ivysaur";
         }
-        else if (this.id == 3) {
+        else{
             return "Venusaur";
         }
         // Return the name based on the current id
-        return ""; // Placeholder return value
+        // Placeholder return value
     }
 
     // getID method
