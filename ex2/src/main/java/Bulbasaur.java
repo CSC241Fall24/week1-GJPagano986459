@@ -66,7 +66,7 @@ public class Bulbasaur {
         // TODO: Implement this method
 
         // Return a string representation of the Bulbasaur object
-        return getName() + " " + getLevel() + " " + getID(); // Placeholder return value
+        return "Level: " + level + ", ID: " + id;; // Placeholder return value
     }
 
     // equals method
