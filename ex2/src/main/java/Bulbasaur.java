@@ -1,59 +1,75 @@
-public class Bulbasaur {
+/*
+ * Name: Greg Pagano
+ * Date: 2/9/2024
+ * Course: CSC241
+ * Dr. Chen
+ * Assignment: Pokemon Bulbasaur to Venusaur
+ * Description: This program defines a Bulbasaur class with methods to set and get its level, ID, name, and to copy itself.
+ */
+
+ public class Bulbasaur {
     private int id;
     private int level;
 
     // Constructor
     public Bulbasaur() {
-        // TODO: Initialize id and level with appropriate values
+        this.id = 1;
+        this.level = 1;
     }
 
     // setLevel method
     public void setLevel(int lv) {
-        // TODO: Implement this method
-        // Update the level
-        // If the new level is 16 or higher but less than 32, evolve to Ivysaur
-        // If the new level is 32 or higher, evolve to Venusaur
+        this.level = lv;
+        if (lv >= 32) {
+            this.id = 3;
+        } else if (lv >= 16) {
+            this.id = 2;
+        } else {
+            this.id = 1;
+        }
     }
 
     // getLevel method
     public int getLevel() {
-        // TODO: Implement this method
-        return 0; // Placeholder return value
+        return this.level;
     }
 
     // getName method
     public String getName() {
-        // TODO: Implement this method
-        // Return the name based on the current id
-        return ""; // Placeholder return value
+        if (this.id == 1) {
+            return "Bulbasaur";
+        } else if (this.id == 2) {
+            return "Ivysaur";
+        } else {
+            return "Venusaur";
+        }
     }
 
     // getID method
     public int getID() {
-        // TODO: Implement this method
-        return 0; // Placeholder return value
+        return this.id;
     }
 
     // toString method
     @Override
     public String toString() {
-        // TODO: Implement this method
-        // Return a string representation of the Bulbasaur object
-        return ""; // Placeholder return value
+        return "Level: " + level + ", ID: " + id;
     }
 
     // equals method
     @Override
     public boolean equals(Object obj) {
-        // TODO: Implement this method
-        // Compare this Bulbasaur object with another object
-        return false; // Placeholder return value
+        if (this == obj) return true;
+        if (!(obj instanceof Bulbasaur)) return false;
+        Bulbasaur other = (Bulbasaur) obj;
+        return this.id == other.id && this.level == other.level;
     }
 
     // copy method
     public Bulbasaur copy() {
-        // TODO: Implement this method
-        // Create and return a new Bulbasaur object with the same id and level
-        return null; // Placeholder return value
+        Bulbasaur copy = new Bulbasaur();
+        copy.id = this.id;
+        copy.level = this.level;
+        return copy;
     }
 }
